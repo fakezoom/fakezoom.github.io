@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <title>Document</title>
+</head>
+<body class="">
+    <div id="wc-loading" style="display: none;">
+        <div class="loading-main">
+            <img class="loading-img" src="https://us04st1.zoom.us/web_client/sjstu3/image/loading.png" alt="loading...">
+            <div class="join-meeting">Joining Meeting...</div>
+        </div>
+    </div>
+    <div class="main">
+        <textarea class="hideme" id="invite_email" style="display: none" aria-hidden="true" aria-label="invite email">Ephrem Adugna is inviting you to a scheduled Zoom meeting.
+
+Topic: Ephrem Adugna's Zoom Meeting
+
+Join Zoom Meeting
+https://us04web.zoom.us/j/73020583010?pwd=SURlYU8rZE9vMjhvb3hQRGhoc0xwdz09
+
+Meeting ID: 730 2058 3010
+Passcode: qjzhm3
+
+</textarea>
+        <textarea class="hideme" id="3rd_party_audio_info" style="display: none" aria-hidden="true"
+            aria-label="3rd party audio info"></textarea>
+        <textarea class="hideme" id="wr_info" style="display: none" aria-hidden="true">{"options":0}</textarea>
+        <input class="hideme" id="cdn_path" value="https://us04st1.zoom.us/web_client/sjstu3">
+        <div role="alert" aria-atomic="true" aria-live="assertive" id="aria-notify-area" class="sr-only"></div>
+        <div id="root">
+            <div class="meeting-app">
+                <div></div><span></span>
+                <div role="presentation" class="meeting-client">
+                    <div class="meeting-client-inner">
+                        <div id="wc-content">
+                            <div id="wc-container-left" class="" style="width: 100%;">
+                                <div class="meeting-info-container meeting-info-container--left-side" style=""><button
+                                        class="meeting-info-icon__icon-wrap  ax-outline-blue" type="button"
+                                        aria-label="Meeting information" aria-expanded="false"><i
+                                            class="meeting-info-icon__icon meeting-info-icon__icon--encryption"></i></button>
+                                </div>
+                                <div id="notificationManager" class="notification-manager"></div>
+                                <div style="display: none;">
+                                    <div class="speaker-view"><canvas width="1920" height="757" id="speak-view-video"
+                                            class="speaker-view__canvas"></canvas></div>
+                                </div>
+                                <div class="sharing-layout" style="display: none; overflow: hidden;">
+                                    <div class="sharee-container">
+                                        <div class="sharee-container__indicator">
+                                            <div class="react-draggable"
+                                                style="touch-action: none; transform: translate(0px, 0px);">
+                                                <div class="sharee-sharing-indicator" role="presentation">
+                                                    <div class="sharee-sharing-indicator__tip">You are viewing {0}'s
+                                                        screen<i class="sharee-sharing-indicator__mute-icon"></i></div>
+                                                    <div class="sharee-sharing-indicator__dropdown dropdown btn-group">
+                                                        <button aria-label="sharing view options"
+                                                            id="sharingViewOptions" role="button" aria-haspopup="true"
+                                                            aria-expanded="false" type="button"
+                                                            class="sharee-sharing-indicator__dropdown-button dropdown-toggle btn btn-default">View
+                                                            Options<i
+                                                                class="sharee-sharing-indicator__dropdown-icon"></i></button>
+                                                        <ul role="menu"
+                                                            class="sharee-sharing-indicator__menu dropdown-menu"
+                                                            aria-labelledby="sharingViewOptions">
+                                                            <li role="presentation"
+                                                                class="sharee-sharing-indicator__item sharee-sharing-indicator__item--checked">
+                                                                <a aria-label="Fit to Window selected" role="menuitem"
+                                                                    tabindex="-1" href="#">Fit to Window</a></li>
+                                                            <li role="presentation"
+                                                                class="sharee-sharing-indicator__item"><a
+                                                                    aria-label="Original Size " role="menuitem"
+                                                                    tabindex="-1" href="#">Original Size</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sharee-container__viewport react-draggable" role="presentation"
+                                            tabindex="-1"
+                                            style="touch-action: none; margin-top: 0px; height: 757px; width: 1345.78px; transform: translate(0px, 0px);">
+                                            <canvas class="sharee-container__canvas" width="1920"
+                                                height="1080"></canvas>
+                                            <div class="sharee-container__canvas-outline"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main-layout"
+                                    style="display: block; background: rgb(17, 17, 17); height: 100%;">
+                                    <div style="height: 100%; display: block;">
+                                        <div class="gallery-video-container__main-view">
+                                            <div class="gallery-video-container__wrap"
+                                                style="position: relative; width: 1920px; height: 757px;"><canvas
+                                                    width="1920" height="757" id="main-video"
+                                                    class="gallery-video-container__canvas"></canvas>
+                                                <div class="gallery-video-container__video-frame react-draggable"
+                                                    style="touch-action: none; width: 1346px; height: 757px; background-color: rgb(26, 26, 26); z-index: 0; cursor: default; transform: translate(287px, -757px);">
+                                                    <div class="video-avatar__avatar">
+                                                        <div class="video-avatar__avatar-title">
+                                                            <video width="100%" height="100%" controls id="video" loop autoplay>
+                                                                <source src="./assets/Khan Academy Sample Zoom Class.mp4"  type="video/mp4">
+                                                                Your browser does not support the video tag.
+                                                            </video>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <footer role="presentation" id="wc-footer" class="footer" style="width: 100%;">
+                                    <div class="footer__inner">
+                                        <div>
+                                            <div class="join-audio-container"><button tabindex="0" type="button"
+                                                    class="zm-btn join-audio-container__btn zm-btn--default zm-btn__outline--blue zm-btn-icon"
+                                                    aria-label="unmute my microphone"><i
+                                                        class="zm-icon zm-icon-voip-muted"></i>Unmute<span
+                                                        class="loading" style="display: none;"></span></button>
+                                                <div class="audio-option-menu dropup btn-group"><button
+                                                        aria-label="More audio controls" id="audioOptionMenu"
+                                                        role="button" aria-haspopup="true" aria-expanded="false"
+                                                        type="button"
+                                                        class="audio-option-menu__button dropdown-toggle btn btn-default"><i
+                                                            class="audio-option-menu__icon"></i></button>
+                                                    <ul role="menu" class="audio-option-menu__pop-menu dropdown-menu"
+                                                        aria-labelledby="audioOptionMenu">
+                                                        <li role="heading" class="dropdown-header">Select a Microphone
+                                                        </li>
+                                                        <li role="presentation" class=""><a
+                                                                aria-label="Select a microphone unselect"
+                                                                role="menuitem" tabindex="-1" href="#">Unrecognized
+                                                                microphone0</a></li>
+                                                        <li role="presentation"
+                                                            class="audio-option-menu__pop-menu--checked"><a
+                                                                aria-label="Select a microphone selected"
+                                                                role="menuitem" tabindex="-1" href="#">Same as
+                                                                System</a></li>
+                                                        <div class="common-ui-component__dropdown-divider"></div>
+                                                        <li role="heading" class="dropdown-header">Select a Speaker</li>
+                                                        <li role="presentation" class=""><a
+                                                                aria-label="Select a speaker unselect" role="menuitem"
+                                                                tabindex="-1" href="#">Unrecognized speaker0</a></li>
+                                                        <li role="presentation"
+                                                            class="audio-option-menu__pop-menu--checked"><a
+                                                                aria-label="Select a speaker selected" role="menuitem"
+                                                                tabindex="-1" href="#">Same as System</a></li>
+                                                        <div class="common-ui-component__dropdown-divider"></div>
+                                                        <li role="presentation" class=""><a role="menuitem"
+                                                                tabindex="-1" href="#">Leave Computer Audio</a></li>
+                                                        <li role="presentation" class=""><a role="menuitem"
+                                                                tabindex="-1" href="#">Audio Options</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="send-video-container"><button tabindex="0" type="button"
+                                                    class="zm-btn send-video-container__btn zm-btn--default zm-btn__outline--blue zm-btn-icon"
+                                                    aria-label="start sending my video"><i
+                                                        class="zm-icon zm-icon-start-video"></i>Start Video<span
+                                                        class="loading" style="display: none;"></span></button></div>
+                                        </div>
+                                        <div class="footer__btns-container">
+                                            <div class="security-option-menu dropup btn-group"><button
+                                                    aria-label="more security options" id="securityOptionMenu"
+                                                    role="button" aria-haspopup="true" aria-expanded="false"
+                                                    type="button"
+                                                    class="security-option-menu__button dropdown-toggle btn btn-default"><i
+                                                        class="security-option-menu__button-icon"></i><span
+                                                        class="security-option-menu__button-text">Security</span></button>
+                                                <ul role="menu" class="security-option-menu__pop-menu dropdown-menu"
+                                                    aria-labelledby="securityOptionMenu">
+                                                    <li role="presentation" class=""><a
+                                                            aria-label="Lock Meeting unselect" aria-selected="false"
+                                                            role="menuitem" tabindex="-1" href="#">Lock Meeting</a></li>
+                                                    <li role="presentation"
+                                                        class="security-option-menu__pop-menu--checked"><a
+                                                            aria-label="Enable Waiting Room selected"
+                                                            aria-selected="true" role="menuitem" tabindex="-1"
+                                                            href="#">Enable Waiting Room</a></li>
+                                                    <li role="presentation" class=""><a
+                                                            aria-label="Hide Profile Pictures unselect"
+                                                            aria-selected="false" role="menuitem" tabindex="-1"
+                                                            href="#">Hide Profile Pictures</a></li>
+                                                    <div class="common-ui-component__dropdown-divider"></div>
+                                                    <li role="heading" class="dropdown-header">Allow participants to:
+                                                    </li>
+                                                    <li role="presentation" class=""><a class="sharebtn"
+                                                            aria-label="allow participant to Share Screen unselect"
+                                                            aria-selected="false" role="menuitem" tabindex="-1"
+                                                            href="#">
+                                                            Share Screen</a>
+                                                            <input type="file" id="myfile" name="myfile"
+                                                                onchange="displayVideo(this)"
+                                                                accept="video/mp4">
+
+                                                        </li>
+                                                    <li role="presentation"
+                                                        class="security-option-menu__pop-menu--checked"><a
+                                                            aria-label="allow participant to Chat selected"
+                                                            aria-selected="true" role="menuitem" tabindex="-1"
+                                                            href="#">Chat</a></li>
+                                                    <li role="presentation"
+                                                        class="security-option-menu__pop-menu--checked"><a
+                                                            aria-label="allow participant to Rename Themselves selected"
+                                                            aria-selected="true" role="menuitem" tabindex="-1"
+                                                            href="#">Rename Themselves</a></li>
+                                                    <li role="presentation"
+                                                        class="security-option-menu__pop-menu--checked"><a
+                                                            aria-label="allow participant to Unmute Themselves selected"
+                                                            aria-selected="true" role="menuitem" tabindex="-1"
+                                                            href="#">Unmute Themselves</a></li>
+                                                    <li role="presentation"
+                                                        class="security-option-menu__pop-menu--checked"><a
+                                                            aria-label="allow participant to Start Video selected"
+                                                            aria-selected="true" role="menuitem" tabindex="-1"
+                                                            href="#">Start Video</a></li>
+                                                    <div class="common-ui-component__dropdown-divider"></div>
+                                                    <li role="presentation"
+                                                        class="security-option-menu__pop-menu--highlight"><a
+                                                            role="menuitem" tabindex="-1" href="#">Suspend Participant
+                                                            Activities</a></li>
+                                                </ul>
+                                            </div><button tabindex="0" class="footer-button__button ax-outline"
+                                                type="button"
+                                                aria-label="open the manage participants list pane,1 particpants">
+                                                <div class="footer-button__img-layer">
+                                                    <div class="footer-button__participants-icon"><span
+                                                            class="footer-button__number-counter"><span>23</span></span>
+                                                    </div>
+                                                </div><span class="footer-button__button-label">Participants</span>
+                                            </button><button for="myfile" tabindex="0" 
+                                                class="footer-button__button ax-outline sharebtn"
+                                                type="button" aria-label="Share Screen">
+                                                <div class="footer-button__img-layer" >
+                                                    <div class="footer-button__share-icon"></div>
+                                                </div><span class="footer-button__button-label" >Share
+                                                    Screen</span>
+                                             
+                                            </button>
+                                                <input type="file" id="myfile" name="myfile" accept="video/mp4"
+                                                    onchange="displayVideo(this)">
+
+                                            <div class="sharing-setting-dropdown-menu-container dropup btn-group">
+                                                <button aria-label="Share permission setting" id="sharePermissionMenu"
+                                                    role="button" aria-haspopup="true" aria-expanded="false"
+                                                    type="button"
+                                                    class="sharing-setting-dropdown-menu-container__button dropdown-toggle btn btn-default"><i
+                                                        class="sharing-setting-dropdown-menu-container__sharer-permission-icon"></i></button>
+                                                <ul role="menu"
+                                                    class="sharing-setting-dropdown-menu-container__popup-menu dropdown-menu"
+                                                    aria-labelledby="sharePermissionMenu">
+                                                    <li role="presentation"
+                                                        class="sharing-setting-dropdown-menu-container__popup-menu--checked">
+                                                        <a aria-label="One participant can share at a time selected"
+                                                            role="menuitem" tabindex="-1" href="#">One participant can
+                                                            share at a time</a></li>
+                                                    <li role="presentation" class=""><a
+                                                            aria-label="Multiple participants can share simultaneously "
+                                                            role="menuitem" tabindex="-1" href="#">Multiple participants
+                                                            can share simultaneously</a></li>
+                                                    <div class="common-ui-component__dropdown-divider"></div>
+                                                    <li role="presentation" class=""><a role="menuitem" tabindex="-1"
+                                                            href="#">Advanced Sharing Options...</a></li>
+                                                </ul>
+                                            </div>
+                                            <div style="display: inline-block;">
+                                                <aside class="sharing-entry-button-container__mask"></aside>
+                                            </div><button tabindex="0" class="footer-button__button ax-outline"
+                                                type="button" aria-label="open the chat pane">
+                                                <div class="footer-button__img-layer">
+                                                    <div class="footer-button__chat-icon"></div>
+                                                </div><span class="footer-button__button-label">Chat</span>
+                                            </button>
+                                            <div class="more-button">
+                                                <div class="dropup btn-group"><button aria-label="More meeting control"
+                                                        id="moreButton" role="button" aria-haspopup="true"
+                                                        aria-expanded="false" type="button" class="more-button__button ax-outline-important
+                 dropdown-toggle btn btn-default">
+                                                        <div class="more-button__img-layer"><span
+                                                                class="more-button__more-icon"></span></div>
+                                                        <div class="more-button__button-label">More</div>
+                                                    </button>
+                                                    <ul role="menu" class="more-button__pop-menu dropdown-menu"
+                                                        aria-labelledby="moreButton">
+                                                        <li role="presentation" class=""><a
+                                                                aria-label="Disable video receiving" role="menuitem"
+                                                                tabindex="-1" href="#">Disable video receiving</a></li>
+                                                        <li role="presentation" class=""><a aria-label="about"
+                                                                role="menuitem" tabindex="-1" href="#">About</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="footer__leave-btn-container"><button aria-haspopup="true"
+                                                    aria-expanded="false" tabindex="0" type="button"
+                                                    class="zmu-btn footer__leave-btn ax-outline ellipsis zmu-btn--danger zmu-btn__outline--blue"
+                                                    aria-label="">End<span class="loading"
+                                                        style="display: none;"></span></button></div>
+                                        </div>
+                                    </div>
+                                </footer>
+                            </div>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <link rel="stylesheet" type="text/css" href="https://us04st1.zoom.us/web_client/sjstu3/css/wc_meeting.min.css">
+   
+    
+    <div class="meeting-info-container meeting-info-container--right-side" style="right: 10px;">
+        <div class="full-screen-icon meeting-info-container__full-screen">
+            <div class="full-screen-icon"><button type="button" onclick="fullscreen()" class="full-screen-widget"
+                    aria-label=" Enter Full Screen"><i class="full-screen-widget__icon"></i>
+                    <div class="full-screen-widget__tooltip">
+                        <div class="global-popover full-screen-widget__tooltip__container" tabindex="0"
+                            role="presentation" aria-labelledby="global-popover__header"
+                            aria-describedby="global-popover__body">
+                            <div id="global-popover__body" class="global-popover__body">FullScreen</div>
+                        </div>
+                    </div>
+                </button></div>
+        </div>
+    </div>
+    <div></div>
+    
+    
+    <div></div>
+   
+    <script defer src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+html, body{
+    overflow-x: hidden;
+}
+.bottom-menu{
+    position: absolute;
+    width: 100%;
+    height: 15%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #202125;
+    padding-left: 20px;
+}
+.mic{
+    max-width: 100%;
+    max-height: 60%;
+     position: relative;
+    top: 40%;
+    left: 1%;
+    color: rgb(221, 221, 221);
+    transform: translateY(-50%);
+        background: transparent;
+        display: inline-block;
+} 
+.mic:hover{
+    cursor: pointer;
+    opacity: 0.75;
+}
+#mute-message{
+    color: white;
+
+}
+.footer {
+    width: 100%;
+    height: 55px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#26282a), to(#1c1e20));
+    background-image: -o-linear-gradient(top, #26282a, #1c1e20);
+    background-image: linear-gradient(180deg, #26282a, #1c1e20);
+    font-size: 12px;
+    color: hsla(0, 0%, 100%, .5);
+    z-index: 20;
+    -webkit-transition: -webkit-transform .2s ease-out;
+    transition: -webkit-transform .2s ease-out;
+    -o-transition: transform .2s ease-out;
+    transition: transform .2s ease-out;
+    transition: transform .2s ease-out, -webkit-transform .2s ease-out;
+}
+.message{
+    display: block;
+    padding-left: 7px;
+}
+#myfile{
+display: none;
+}
